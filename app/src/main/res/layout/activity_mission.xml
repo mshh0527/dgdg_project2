@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.mission.MissionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@color/light_gray"
+        android:layout_marginBottom="80dp">
+        <!-- mission -->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- daily mission -->
+            <ImageView
+                android:id="@+id/daily_imageView"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/image_daily_mission"
+                android:adjustViewBounds="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/bt_mission1"
+                    android:layout_width="@dimen/mission_width"
+                    android:layout_height="@dimen/mission_height"
+                    android:layout_marginRight="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_blue_box"
+                    app:backgroundTint="@null"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/mission_text_padding"
+                    android:text="총 운동시간 30분 채우기"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/mission_text_size" />
+
+                <Button
+                    android:id="@+id/bt_mission1_check"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/image_blue_circle"
+                    app:backgroundTint="@null"
+                    android:text="1Op"
+                    android:textSize="@dimen/mission_text_size"
+                    android:textColor="@color/dark_blue" />
+
+
+            </LinearLayout>
+
+            <!-- weekly mission -->
+            <ImageView
+                android:id="@+id/weekly_imageView"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/image_weekly_mission"
+                android:adjustViewBounds="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_mission2"
+                    android:layout_width="@dimen/mission_width"
+                    android:layout_height="@dimen/mission_height"
+                    android:layout_marginRight="8dp"
+                    android:text="3일 출석하기"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/mission_text_padding"
+                    android:textSize="@dimen/mission_text_size"
+                    android:textColor="@color/dark_blue"
+                    android:background="@drawable/image_blue_box_checked"
+                    app:backgroundTint="@null"
+                    android:adjustViewBounds="true"/>
+
+                <Button
+                    android:id="@+id/bt_mission2_check"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/image_blue_circle_fill"
+                    app:backgroundTint="@null"
+                    android:text="2Op"
+                    android:textSize="@dimen/mission_text_size"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_mission3"
+                    android:layout_width="@dimen/mission_width"
+                    android:layout_height="@dimen/mission_height"
+                    android:layout_marginRight="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_blue_box_checked"
+                    app:backgroundTint="@null"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/mission_text_padding"
+                    android:text="총 운동시간 2시간 채우기"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/mission_text_size" />
+
+                <Button
+                    android:id="@+id/bt_mission3_check"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/image_blue_circle_fill"
+                    app:backgroundTint="@null"
+                    android:text="3Op"
+                    android:textSize="@dimen/mission_text_size"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <!-- monthly mission -->
+            <ImageView
+                android:id="@+id/monthly_imageView"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/image_monthly_mission"
+                android:adjustViewBounds="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_mission4"
+                    android:layout_width="@dimen/mission_width"
+                    android:layout_height="@dimen/mission_height"
+                    android:layout_marginRight="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_gray_box_checked"
+                    app:backgroundTint="@null"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/mission_text_padding"
+                    android:text="미션4"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/mission_text_size" />
+
+                <Button
+                    android:id="@+id/bt_mission4_check"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/image_gray_circle_fill"
+                    app:backgroundTint="@null"
+                    android:text="4Op"
+                    android:textSize="@dimen/mission_text_size"
+                    android:textColor="@color/dark_gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- check reward -->
+    <Button
+        android:id="@+id/check_reward_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:width="120dp"
+        android:height="40dp"
+        android:text="리워드 확인"
+        android:textSize="@dimen/mission_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

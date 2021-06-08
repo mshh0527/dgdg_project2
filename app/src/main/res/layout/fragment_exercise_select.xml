@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context=".ui.home.ExerciseSelectFragment"
+    android:background="@color/light_gray">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:scrollbarThumbVertical="@color/light_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/image_exercise_selection"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+            <!-- add & routine button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp">
+                    <Button
+                        android:id="@+id/bt_add_directly"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/ic_blue_add_24"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="직접 추가"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/start_by_routine"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/ic_blue_routine_24"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="루틴으로 시작"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- aerobic exercises -->
+            <ImageView
+                android:layout_width="330dp"
+                android:layout_height="30dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/image_aerobic"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_gravity="center"
+                android:paddingHorizontal="20dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp">
+                    <Button
+                        android:id="@+id/bt_ex1"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_treadmill"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="트레드밀"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp">
+                    <Button
+                        android:id="@+id/bt_ex2"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_cycle"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="사이클"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- anaerobic exercises -->
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="330dp"
+                android:layout_height="30dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/image_anaerobic"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:paddingHorizontal="20dp"/>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:columnCount="3"
+                android:paddingHorizontal="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:id="@+id/bt_ex3"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:id="@+id/bt_ex4"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp">
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/image_test"
+                        app:backgroundTint="@null" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="test"
+                        android:textSize="@dimen/mission_text_size"
+                        android:textColor="@color/dark_blue" />
+                </LinearLayout>
+            </GridLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+</FrameLayout>

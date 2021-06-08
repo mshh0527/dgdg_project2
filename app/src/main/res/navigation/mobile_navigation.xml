@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <!-- home -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.dgdg.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_exercise_select"
+            app:destination="@id/fragment_exercise_select"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_exercise_select"
+        android:name="com.example.dgdg.ui.home.ExerciseSelectFragment"
+        android:label="test_ex_select"
+        tools:layout="@layout/fragment_exercise_select" >
+        <action
+            android:id="@+id/action_exercise_select_to_exercising"
+            app:destination="@id/fragment_exercising" />
+
+        <action
+            android:id="@+id/action_exercise_select_to_routine"
+            app:destination="@id/fragment_routine" />
+        
+        <action
+            android:id="@+id/action_exercise_select_to_exercising2"
+            app:destination="@id/fragment_exercising2" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/fragment_routine"
+        android:name="com.example.dgdg.ui.home.RoutineFragment"
+        android:label="test_routine"
+        tools:layout="@layout/fragment_routine" >
+        <action
+            android:id="@+id/action_routine_to_exercising"
+            app:destination="@id/fragment_exercising_routine"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_exercising"
+        android:name="com.example.dgdg.ui.home.ExercisingFragment"
+        android:label="test_exercising"
+        tools:layout="@layout/fragment_exercising" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_exercising2"
+        android:name="com.example.dgdg.ui.home.ExercisingFragment"
+        android:label="test_exercising2"
+        tools:layout="@layout/fragment_exercising2" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_exercising_routine"
+        android:name="com.example.dgdg.ui.home.ExercisingFragment"
+        android:label="test_exercising_routine"
+        tools:layout="@layout/fragment_exercising_routine" >
+    </fragment>
+
+    <!-- calender -->
+    <fragment
+        android:id="@+id/navigation_calender"
+        android:name="com.example.dgdg.ui.calendar.CalendarFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+    <!-- group -->
+    <fragment
+        android:id="@+id/navigation_group"
+        android:name="com.example.dgdg.ui.group.GroupFragment"
+        android:label="@string/title_group"
+        tools:layout="@layout/fragment_group" />
+
+    <!-- ranking -->
+    <fragment
+        android:id="@+id/navigation_ranking"
+        android:name="com.example.dgdg.ui.ranking.RankingFragment"
+        android:label="@string/title_ranking"
+        tools:layout="@layout/fragment_ranking" />
+
+</navigation>

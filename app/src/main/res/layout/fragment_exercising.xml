@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context=".ui.home.ExercisingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:scrollbarThumbVertical="@color/light_gray">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/image_left_blue_line2"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="30dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:id="@+id/exercise_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:background="@drawable/image_right_blue_line2"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/exercise_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:adjustViewBounds="true" />
+
+            <!-- exercise_record (aerobic / anaerobic / sum ) -->
+            <LinearLayout
+                android:id="@+id/linearLayout3_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <ImageView
+                    android:background="@drawable/image_exercise_record"
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="30dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/aerobic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:padding="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="목표 설정"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/goal"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:background="@color/white"
+                    android:text="1세트 ___회\n___ 세트\n중량: ___kg"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="20sp" />
+
+
+
+                <TextView
+                    android:id="@+id/sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:padding="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="운동 시간"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/time_record"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:paddingStart="100dp"
+                    android:paddingEnd="100dp"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:background="@color/white"
+                    android:text="00:00:03"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/start"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/image_blue_round_button"
+                    app:backgroundTint="@null"
+                    android:text="시작"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/rest30"
+                        android:layout_width="160dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/activity_vertical_margin"
+                        android:background="@drawable/image_white_round_button"
+                        app:backgroundTint="@null"
+                        android:text="30초 휴식"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="28dp"
+                        android:layout_marginBottom="30dp"/>
+                    <Button
+                        android:id="@+id/rest60"
+                        android:layout_width="160dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/image_white_round_button"
+                        app:backgroundTint="@null"
+                        android:text="1분 휴식"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="28dp"
+                        android:layout_marginBottom="30dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

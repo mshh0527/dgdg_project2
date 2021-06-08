@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="알림 설정">
+
+        <PreferenceScreen
+            android:title="운동 시작 알림"
+            android:summary="요일, 시간"
+            android:key="exercise" >
+            <intent android:targetPackage="com.example.dgdg"
+                android:targetClass="com.example.dgdg.ui.setting.ExerciseAlarmActivity"/>
+        </PreferenceScreen>
+
+        <SwitchPreference
+            android:title="보충제 알림"
+            android:summary="운동 종료 30분 후(현재 5초)"
+            android:key="protein"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

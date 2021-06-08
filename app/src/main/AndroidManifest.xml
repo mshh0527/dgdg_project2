@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dgdg">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dgdg"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.home.PopupExplainActivity"
+            android:theme="@style/Theme.MyDialog"/>
+        <activity android:name=".ui.setting.ExerciseAlarmActivity"/>
+        <activity android:name=".ui.setting.AlarmSetting" />
+        <activity android:name=".ui.setting.SaveAlarmActivity" />
+        <activity android:name=".ui.setting.DetailActivity" />
+        <activity android:name=".ui.mission.MyPointActivity" />
+        <activity android:name=".ui.mission.MissionActivity" />
+        <activity android:name=".ui.home.TimerActivity"/>
+        <activity android:name=".activity.JoinActivity" />
+        <activity android:name=".MainActivity" />
+        <!-- .activity.LoginActivity     .MainActivity -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".ui.setting.ProteinAlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".ui.setting.ExerciseAlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

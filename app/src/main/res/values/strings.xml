@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">dgdg</string>
+    <string name="title_home">Home</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_group">Group</string>
+    <string name="title_ranking">Ranking</string>
+
+    <string name="menu_setting">Setting</string>
+    <string name="menu_mission">Mission</string>
+    <string name="mission">mission</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
